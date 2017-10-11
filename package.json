@@ -1,0 +1,31 @@
+{
+  "name": "hello-cd",
+  "version": "1.0.0",
+  "description": "simple express app to test CD",
+  "main": "server.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha",
+    "test:e2e": "npm start & sleep 5 && ./node_modules/.bin/mocha ./test/e2e ; kill $(ps | grep '[n]ode server.js' | awk '{print $1}')",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickLavrov/hello-cd.git"
+  },
+  "dependencies": {
+    "express": "3.x"
+  },
+  "devDependencies": {
+    "chromedriver": "^2.33.1",
+    "mocha": "3.0.2",
+    "selenium-webdriver": "^3.6.0",
+    "should": "^13.1.2"
+  },
+  "author": "Nick Lavrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickLavrov/hello-cd/issues"
+  },
+  "homepage": "https://github.com/NickLavrov/hello-cd#readme"
+}
+
